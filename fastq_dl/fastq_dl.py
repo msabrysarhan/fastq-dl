@@ -340,7 +340,7 @@ def download_ena_fastq(
         while not success:
             logging.info(f"\t\t{Path(ftp).name} FTP download attempt {attempt + 1}")
             outcome = execute(
-                f"wget --quiet -O {fastq} ftp://{ftp}",
+                f"wget --quiet -O {fastq} https://{ftp}",
                 max_attempts=max_attempts,
                 sleep=sleep,
             )
